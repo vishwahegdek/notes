@@ -1,0 +1,25 @@
+Vishwa prefers to use 'docker compose' instead of 'docker-compose' as the latter is deprecated and not working on their system.
+
+Vishwa wants to learn Kafka and plans to implement it in a project.
+
+Vishwa's desktop is installed with Ubuntu Desktop 24.
+
+Vishwa also knows Node.js and Express.
+
+Vishwa has a Dell laptop and a desktop.
+
+Vishwa is pretty good at using Linux and the terminal for tasks like installing software, navigation, and process management.
+
+Vishwa has sometimes used `chmod` and `chown`, has been using `apt` and `apt-get` for a long time, knows how to use `ifconfig`, `ping`, and `curl`, has used SSH to log into other Linux systems and handled tasks there, has troubleshooted some errors while mounting hard drives and pendrives, and is pretty good at using Git.
+
+Vishwa wants to do an end-to-end home automation project.
+
+Is learning about process management in Linux using commands like `ps aux` to identify running processes.
+
+Vishwa has been using Ubuntu for more than 2 years and is now looking to switch to a more complex but useful Linux distro.
+
+Vishwa is interested in making a Linux distro from scratch.
+
+Vishwa is interested in both Computer Science and electronics and wants to build a startup in the future.
+
+Vishwa wants to know more about file and directory permissions in Linux, including how to change them, and may need this information in the future.
