@@ -1,8 +1,34 @@
-# Setting Default Push Repository in Git
+# Git 
 
-When working with Git, it's often convenient to configure your default push behavior to automatically target specific repositories and branches. This guide explains how to set the origin master as your default push destination.
+## Most Useful for me
 
-## Basic Configuration
+To view your remote repository settings:
+
+```bash
+git remote -v
+```
+
+To add a remote for the repo
+```bash
+git remote add origin <your-new-repo-URL>
+```
+
+To explicitly set the upstream branch for your current branch:
+```bash
+git push --set-upstream origin master
+git branch --set-upstream-to=origin/master
+```
+
+To untrack files:
+```bash
+git rm -r --cached <file>
+```
+
+To move files:
+```bash
+git mv old/path/file.txt new/path/file.txt
+```
+
 
 To set your default push configuration:
 
@@ -12,15 +38,6 @@ git config --global push.default simple
 
 This configuration ensures that Git pushes to the upstream branch with the same name as your local branch. When you're on the master branch, it will push to origin/master.
 
-## Setting Upstream Branch
-
-If you want to explicitly set the upstream branch for your current branch:
-
-```bash
-git branch --set-upstream-to=origin/master
-```
-
-This command configures your current branch to track origin/master, making pushes and pulls more straightforward.
 
 ## Advanced Configuration
 
