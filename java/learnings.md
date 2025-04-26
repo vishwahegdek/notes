@@ -21,3 +21,19 @@ To verify which Java your Maven uses:
 ```bash
 mvn -v
 ```
+
+To comile and run the code
+```bash
+javac Main.java
+java Main
+```
+
+## 🚀 When to Move to IntelliJ from VS Code
+
+You might want to switch if:
+
+- You start working with Maven/Gradle projects
+
+- You want advanced refactoring tools
+
+- You're doing Spring Boot development
