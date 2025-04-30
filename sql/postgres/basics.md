@@ -35,6 +35,42 @@ DROP DATABASE database_name;
 ALTER DATABASE database_name RENAME TO new_database_name;
 ```
 
+
+## Useful psql Commands
+
+```
+\? - Show psql command help
+\h - SQL command help
+\l - List databases
+\c dbname - Connect to a database
+\dt - List tables
+\d table_name - Describe a table
+\du - List users and roles
+\dn - List schemas
+\df - List functions
+\dv - List views
+\timing - Toggle timing of commands
+\e - Open editor
+\q - Quit psql
+```
+
+## Backup and Restore
+
+```bash
+# Backup a database
+pg_dump dbname > backup_file.sql
+
+# Backup with compression
+pg_dump dbname | gzip > backup_file.gz
+
+# Restore a database
+psql dbname < backup_file.sql
+
+# Restore a compressed backup
+gunzip -c backup_file.gz | psql dbname
+```
+
+
 ## Table Operations
 
 ### Create Tables
@@ -255,38 +291,4 @@ ALTER USER username WITH PASSWORD 'new_password';
 
 -- Drop user
 DROP USER username;
-```
-
-## Useful psql Commands
-
-```
-\? - Show psql command help
-\h - SQL command help
-\l - List databases
-\c dbname - Connect to a database
-\dt - List tables
-\d table_name - Describe a table
-\du - List users and roles
-\dn - List schemas
-\df - List functions
-\dv - List views
-\timing - Toggle timing of commands
-\e - Open editor
-\q - Quit psql
-```
-
-## Backup and Restore
-
-```bash
-# Backup a database
-pg_dump dbname > backup_file.sql
-
-# Backup with compression
-pg_dump dbname | gzip > backup_file.gz
-
-# Restore a database
-psql dbname < backup_file.sql
-
-# Restore a compressed backup
-gunzip -c backup_file.gz | psql dbname
 ```
