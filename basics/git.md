@@ -24,7 +24,7 @@ To untrack files:
 git rm -r --cached <file>
 ```
 
-To move files:
+To move or remane files:
 ```bash
 git mv old/path/file.txt new/path/file.txt
 ```
