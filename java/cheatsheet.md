@@ -1147,7 +1147,42 @@ class Child extends Parent {
 }
 ```
 
-### Access Modifiers
+## Access Modifiers
+
+Access modifiers control the visibility and accessibility of classes, methods, and fields.
+
+| Modifier | Same Class | Same Package | Subclasses | Other Packages |
+|----------|-------|---------|----------|-------|
+| `public` | ✅ | ✅ | ✅ | ✅ |
+| `protected` | ✅ | ✅ | ✅ | ❌ |
+| `default` (no modifier) | ✅ | ✅ | ❌ | ❌ |
+| `private` | ✅ | ❌ | ❌ | ❌ |
+
+```java
+
+public class AccessModifierExample {
+    public String publicVar = "Accessible everywhere";
+    protected String protectedVar = "Accessible in package and subclasses";
+    String defaultVar = "Accessible only in package";
+    private String privateVar = "Accessible only in this class";
+    
+    public void publicMethod() {
+        System.out.println("Can be accessed from anywhere");
+    }
+    
+    protected void protectedMethod() {
+        System.out.println("Can be accessed from the same package and subclasses");
+    }
+    
+    void defaultMethod() {
+        System.out.println("Can be accessed only from the same package");
+    }
+    
+    private void privateMethod() {
+        System.out.println("Can be accessed only within this class");
+    }
+}
+```
 
 **Access Levels:**
 ```java
@@ -1201,42 +1236,6 @@ class DifferentPackageClass {
         System.out.println(obj.publicVar);      // OK
         // System.out.println(obj.protectedVar);  // Error: not accessible
 
-```
-
-## Access Modifiers
-
-Access modifiers control the visibility and accessibility of classes, methods, and fields.
-
-| Modifier | Class | Package | Subclass | World |
-|----------|-------|---------|----------|-------|
-| `public` | Yes | Yes | Yes | Yes |
-| `protected` | Yes | Yes | Yes | No |
-| `default` (no modifier) | Yes | Yes | No | No |
-| `private` | Yes | No | No | No |
-
-```java
-public class AccessModifierExample {
-    public String publicVar = "Accessible everywhere";
-    protected String protectedVar = "Accessible in package and subclasses";
-    String defaultVar = "Accessible only in package";
-    private String privateVar = "Accessible only in this class";
-    
-    public void publicMethod() {
-        System.out.println("Can be accessed from anywhere");
-    }
-    
-    protected void protectedMethod() {
-        System.out.println("Can be accessed from the same package and subclasses");
-    }
-    
-    void defaultMethod() {
-        System.out.println("Can be accessed only from the same package");
-    }
-    
-    private void privateMethod() {
-        System.out.println("Can be accessed only within this class");
-    }
-}
 ```
 
 ## Packages

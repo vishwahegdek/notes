@@ -9,6 +9,7 @@ sudo apt install openjdk-21-jdk
 
 ```bash
 sudo update-alternatives --config java
+sudo update-alternatives --config javac
 ```
 
 🔍 How to Check Java Version Being Used
