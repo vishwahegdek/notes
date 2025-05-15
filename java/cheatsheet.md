@@ -286,7 +286,7 @@ int element = matrix[1][2]; // Value is 6
 int[][] irregular = new int[3][];
 irregular[0] = new int[2];
 irregular[1] = new int[3];
-irregular[2] = new int[4];
+irregular[2] = new int[4];  
 ```
 
 ### Strings

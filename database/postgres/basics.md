@@ -54,6 +54,44 @@ ALTER DATABASE database_name RENAME TO new_database_name;
 \q - Quit psql
 ```
 
+## Users and Permissions
+
+```sql
+-- Create user
+CREATE USER username WITH PASSWORD 'password';
+
+-- Create role
+CREATE ROLE role_name;
+
+-- Grant privileges
+GRANT privilege ON table_name TO username;
+
+-- Common privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, USAGE
+
+-- Grant all privileges
+GRANT ALL PRIVILEGES ON DATABASE database_name TO username;
+
+-- Revoke privileges
+REVOKE privilege ON table_name FROM username;
+
+-- Alter user password
+ALTER USER username WITH PASSWORD 'new_password';
+
+-- Drop user
+DROP USER username;
+```
+
+
+⚠️ You cannot drop a user if they own any databases, tables, or other objects. In that case, you'll need to reassign or drop those objects first.
+
+Example to reassign and drop owned objects:
+
+```sql
+REASSIGN OWNED BY username TO postgres;
+DROP OWNED BY username;
+DROP USER username;
+```
+
 ## Backup and Restore
 
 ```bash
@@ -266,29 +304,3 @@ SAVEPOINT savepoint_name;
 ROLLBACK TO savepoint_name;
 ```
 
-## Users and Permissions
-
-```sql
--- Create user
-CREATE USER username WITH PASSWORD 'password';
-
--- Create role
-CREATE ROLE role_name;
-
--- Grant privileges
-GRANT privilege ON table_name TO username;
-
--- Common privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, USAGE
-
--- Grant all privileges
-GRANT ALL PRIVILEGES ON DATABASE database_name TO username;
-
--- Revoke privileges
-REVOKE privilege ON table_name FROM username;
-
--- Alter user password
-ALTER USER username WITH PASSWORD 'new_password';
-
--- Drop user
-DROP USER username;
-```
